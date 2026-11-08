@@ -1,5 +1,5 @@
 // Offline support: cache the app shell, serve it cache-first, refresh it in the background.
-const CACHE = 'may-the-game-v2';
+const CACHE = 'may-the-game-v6';
 const FILES = ['./', 'index.html', 'manifest.webmanifest', 'bagel-fat-one.woff2',
   'apple-touch-icon.png', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
